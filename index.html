@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perspective Matters</title>
+  <style>
+    /* ---------------------------------------------
+       Base Styles
+       --------------------------------------------- */
+    body {
+      font-family: "Georgia", serif;
+      background-color: #f5f5dc; /* archaic parchment tone */
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    header {
+      background-color: #556b2f;
+      padding: 15px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      color: #fff;
+      border-bottom: 4px solid #333;
+      position: relative;
+    }
+
+    /* Toggle Dark Mode Button */
+    .dark-mode-toggle {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      background: #fff;
+      color: #333;
+      padding: 6px 10px;
+      border: 2px solid #333;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .dark-mode-toggle:hover {
+      background: #ddd;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #faf0e6; /* old paper color */
+      border: 2px solid #333;
+      box-shadow: 5px 5px 0px #aaa;
+      transition: background-color 0.5s, border-color 0.5s;
+    }
+
+    .filter-tags {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .filter-tags span {
+      padding: 5px 10px;
+      background: #8b4513;
+      color: #fff;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .filter-tags span:hover {
+      background: #a0522d;
+    }
+
+    /* ---------------------------------------------
+       Post Styles
+       --------------------------------------------- */
+    .posts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .post {
+      padding: 15px;
+      border-bottom: 2px dashed #333;
+      cursor: pointer;
+      font-weight: bold;
+      display: block;
+      transition: background 0.3s;
+      position: relative;
+      text-decoration: none;
+      color: #333;
+    }
+    .post:hover {
+      background: #f4a460;
+      color: #333;
+    }
+    .post:last-child {
+      border-bottom: none;
+    }
+    .post-title {
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+      margin: 0;
+    }
+    .post-date {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0;
+    }
+    .post-category {
+      font-size: 14px;
+      color: #8b0000;
+    }
+
+    /* ---------------------------------------------
+       Footer
+       --------------------------------------------- */
+    footer {
+      background-color: #556b2f;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-top: 4px solid #333;
+      margin-top: 30px;
+      position: relative;
+    }
+    footer .about {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+    footer .social-links {
+      margin-top: 10px;
+    }
+    footer .social-links a {
+      color: #fff;
+      margin: 0 5px;
+      text-decoration: underline;
+    }
+
+    /* ---------------------------------------------
+       Floating Back-To-Top Button
+       --------------------------------------------- */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      color: #333;
+      border: 2px solid #333;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .back-to-top:hover {
+      background: #ddd;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    Perspective Matters 🌍📜
+    <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
+  </header>
+
+  <div class="container">
+    <div class="filter-tags">
+      <span>🤖 #AI</span>
+      <span>✈️ #Living Abroad</span>
+      <span>🎸 #Psychedelic Music</span>
+    </div>
+
+    <div class="posts">
+      <a class="post" href="ai.html">
+        <div class="post-title">🤖 The Impact of AI on Everyday Life</div>
+        <div class="post-date">January 15, 2025</div>
+        <div class="post-category">#AI</div>
+      </a>
+
+      <a class="post" href="expat.html">
+        <div class="post-title">✈️ Adjusting to Life in Germany as an Expat</div>
+        <div class="post-date">December 10, 2024</div>
+        <div class="post-category">#Living Abroad</div>
+      </a>
+
+      <a class="post" href="psychedelic.html">
+        <div class="post-title">🎸 Psychedelic Rock Revival and Modern Influences</div>
+        <div class="post-date">November 28, 2024</div>
+        <div class="post-category">#Psychedelic Music</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="about">
+      <h3>About Me</h3>
+      <p>A passionate creator blending old-school aesthetics with modern interactivity. Whether discussing AI, expat life, or psychedelic music, I love crafting engaging and thought-provoking content.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
+</body>
+</html>
