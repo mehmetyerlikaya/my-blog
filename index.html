@@ -1,212 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perspective Matters</title>
-  <style>
-    /* ---------------------------------------------
-       Base Styles
-       --------------------------------------------- */
-    body {
-      font-family: "Georgia", serif;
-      background-color: #f5f5dc; /* archaic parchment tone */
-      color: #333;
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.5s, color 0.5s;
-    }
-
-    header {
-      background-color: #556b2f;
-      padding: 15px;
-      text-align: center;
-      font-size: 26px;
-      font-weight: bold;
-      color: #fff;
-      border-bottom: 4px solid #333;
-      position: relative;
-    }
-
-    /* Toggle Dark Mode Button */
-    .dark-mode-toggle {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-      background: #fff;
-      color: #333;
-      padding: 6px 10px;
-      border: 2px solid #333;
-      cursor: pointer;
-      font-size: 14px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    .dark-mode-toggle:hover {
-      background: #ddd;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #faf0e6; /* old paper color */
-      border: 2px solid #333;
-      box-shadow: 5px 5px 0px #aaa;
-      transition: background-color 0.5s, border-color 0.5s;
-    }
-
-    .filter-tags {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .filter-tags span {
-      padding: 5px 10px;
-      background: #8b4513;
-      color: #fff;
-      border-radius: 5px;
-      margin: 5px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background 0.3s;
-    }
-    .filter-tags span:hover {
-      background: #a0522d;
-    }
-
-    /* ---------------------------------------------
-       Post Styles
-       --------------------------------------------- */
-    .posts {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-
-    .post {
-      padding: 15px;
-      border-bottom: 2px dashed #333;
-      cursor: pointer;
-      font-weight: bold;
-      display: block;
-      transition: background 0.3s;
-      position: relative;
-      text-decoration: none;
-      color: #333;
-    }
-    .post:hover {
-      background: #f4a460;
-      color: #333;
-    }
-    .post:last-child {
-      border-bottom: none;
-    }
-    .post-title {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: underline;
-      margin: 0;
-    }
-    .post-date {
-      font-size: 14px;
-      color: #555;
-      margin: 5px 0;
-    }
-    .post-category {
-      font-size: 14px;
-      color: #8b0000;
-    }
-
-    /* ---------------------------------------------
-       Footer
-       --------------------------------------------- */
-    footer {
-      background-color: #556b2f;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      border-top: 4px solid #333;
-      margin-top: 30px;
-      position: relative;
-    }
-    footer .about {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-      line-height: 1.6;
-    }
-    footer .social-links {
-      margin-top: 10px;
-    }
-    footer .social-links a {
-      color: #fff;
-      margin: 0 5px;
-      text-decoration: underline;
-    }
-
-    /* ---------------------------------------------
-       Floating Back-To-Top Button
-       --------------------------------------------- */
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #fff;
-      color: #333;
-      border: 2px solid #333;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background 0.3s;
-    }
-    .back-to-top:hover {
-      background: #ddd;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehmet Yerlikaya - Personal Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    Perspective Matters 🌍📜
-    <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
-  </header>
+    <header>
+        <h1>Mehmet Yerlikaya</h1>
+        <p>🚀 Data Enthusiast & Business Analyst</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <div class="container">
-    <div class="filter-tags">
-      <span>🤖 #AI</span>
-      <span>✈️ #Living Abroad</span>
-      <span>🎸 #Psychedelic Music</span>
-    </div>
+    <main>
+        <section id="about">
+            <h2>📷 About Me</h2>
+            <div class="about-container">
+                <img src="your-photo.jpg" alt="Mehmet Yerlikaya">
+                <p>Hi, I'm Mehmet Yerlikaya. I'm a data enthusiast with a strong interest in business intelligence, analytics, and automation. I love working on projects that optimize workflows, analyze data effectively, and create meaningful insights.</p>
+            </div>
+        </section>
 
-    <div class="posts">
-      <a class="post" href="ai.html">
-        <div class="post-title">🤖 The Impact of AI on Everyday Life</div>
-        <div class="post-date">January 15, 2025</div>
-        <div class="post-category">#AI</div>
-      </a>
+        <section id="skills">
+            <h2>💡 Skills & Expertise</h2>
+            <p>SQL | Python | Power BI | Google Data Studio | BigQuery | VBA | Business Intelligence | Data Analytics</p>
+        </section>
 
-      <a class="post" href="expat.html">
-        <div class="post-title">✈️ Adjusting to Life in Germany as an Expat</div>
-        <div class="post-date">December 10, 2024</div>
-        <div class="post-category">#Living Abroad</div>
-      </a>
-
-      <a class="post" href="psychedelic.html">
-        <div class="post-title">🎸 Psychedelic Rock Revival and Modern Influences</div>
-        <div class="post-date">November 28, 2024</div>
-        <div class="post-category">#Psychedelic Music</div>
-      </a>
-    </div>
-  </div>
-
-  <footer>
-    <div class="about">
-      <h3>About Me</h3>
-      <p>A passionate creator blending old-school aesthetics with modern interactivity. Whether discussing AI, expat life, or psychedelic music, I love crafting engaging and thought-provoking content.</p>
-    </div>
-  </footer>
-
-  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
+        <section id="blog">
+            <h2>📝 Blog & Thoughts</h2>
+            <div class="blog-posts-container">
+                <article class="blog-post">
+                    <span class="blog-date">February 2, 2025</span>
+                    <h3>Exploring AI Innovations</h3>
+                    <p>How AI is transforming industries and what the future holds...</p>
+                    <a href="blog-post-ai.html">Read more →</a>
+                </article>
+                <article class="blog-post">
+                    <span class="blog-date">January 15, 2025</span>
+                    <h3>Modern JavaScript Patterns</h3>
+                    <p>Understanding best practices and patterns in JavaScript development...</p>
+                    <a href="blog-post-js.html">Read more →</a>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
